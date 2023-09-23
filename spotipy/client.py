@@ -308,7 +308,8 @@ class Spotify(object):
                 429,
                 -1,
                 "%s:\n %s" % (request.path_url, "Max Retries"),
-                reason=reason
+                reason=reason,
+                headers=response.headers
             )
         except ValueError:
             results = None
